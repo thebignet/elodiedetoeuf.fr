@@ -1,0 +1,77 @@
+<header>
+  <div id="carousel" class="carousel slide">
+    <carousel interval="myInterval">
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide {{$index}}</h4>
+          <p>{{slide.text}}</p>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+  <div id="navbar" class="navbar navbar-inverse relative" role="banner" data-offset-top="300" bs-affix>
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav class="collapse navbar-collapse" role="navigation">
+        <ul id="menu" class="nav navbar-nav">
+          <li class="link-presentation">
+            <a ng-click="scrollTo('presentation')">PRESENTATION</a>
+          </li>
+          <li class="link-oeuvres">
+            <a ng-click="scrollTo('oeuvres')">OEUVRES</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <section id="presentation" class="section">
+      <div class="row">
+        <div class="col-md-8 article">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere leo libero, vel egestas odio ultrices lacinia. Vestibulum congue, dui varius sollicitudin eleifend, turpis leo aliquam metus, a facilisis magna augue sit amet lacus. Proin ultricies aliquet urna, vitae bibendum augue iaculis eget. Suspendisse ac massa vulputate, venenatis nunc sed, pretium magna. Morbi consequat orci sed rhoncus dictum. Suspendisse gravida quam magna, id pharetra arcu feugiat non. Duis ac consectetur felis, ac sodales tellus. Morbi augue lorem, posuere mollis enim ut, euismod sodales quam. Vivamus cursus magna non dapibus tristique. Pellentesque ac mi quis ante convallis accumsan. Donec rhoncus ut turpis nec feugiat. Duis adipiscing metus eget magna viverra convallis.
+        </div>
+        <div class="col-md-4">
+          <img data-src="holder.js/200x300/auto/#666:#444/text:Photo Elodie" alt="Photo">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 article">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere leo libero, vel egestas odio ultrices lacinia. Vestibulum congue, dui varius sollicitudin eleifend, turpis leo aliquam metus, a facilisis magna augue sit amet lacus. Proin ultricies aliquet urna, vitae bibendum augue iaculis eget. Suspendisse ac massa vulputate, venenatis nunc sed, pretium magna. Morbi consequat orci sed rhoncus dictum. Suspendisse gravida quam magna, id pharetra arcu feugiat non. Duis ac consectetur felis, ac sodales tellus. Morbi augue lorem, posuere mollis enim ut, euismod sodales quam. Vivamus cursus magna non dapibus tristique. Pellentesque ac mi quis ante convallis accumsan. Donec rhoncus ut turpis nec feugiat. Duis adipiscing metus eget magna viverra convallis.
+        </div>
+      </div>
+    </section>
+    <section id="oeuvres" class="section">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Oeuvres</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 article">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere leo libero, vel egestas odio ultrices lacinia. Vestibulum congue, dui varius sollicitudin eleifend, turpis leo aliquam metus, a facilisis magna augue sit amet lacus. Proin ultricies aliquet urna, vitae bibendum augue iaculis eget. Suspendisse ac massa vulputate, venenatis nunc sed, pretium magna. Morbi consequat orci sed rhoncus dictum. Suspendisse gravida quam magna, id pharetra arcu feugiat non. Duis ac consectetur felis, ac sodales tellus. Morbi augue lorem, posuere mollis enim ut, euismod sodales quam. Vivamus cursus magna non dapibus tristique. Pellentesque ac mi quis ante convallis accumsan. Donec rhoncus ut turpis nec feugiat. Duis adipiscing metus eget magna viverra convallis.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 article">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere leo libero, vel egestas odio ultrices lacinia. Vestibulum congue, dui varius sollicitudin eleifend, turpis leo aliquam metus, a facilisis magna augue sit amet lacus. Proin ultricies aliquet urna, vitae bibendum augue iaculis eget. Suspendisse ac massa vulputate, venenatis nunc sed, pretium magna. Morbi consequat orci sed rhoncus dictum. Suspendisse gravida quam magna, id pharetra arcu feugiat non. Duis ac consectetur felis, ac sodales tellus. Morbi augue lorem, posuere mollis enim ut, euismod sodales quam. Vivamus cursus magna non dapibus tristique. Pellentesque ac mi quis ante convallis accumsan. Donec rhoncus ut turpis nec feugiat. Duis adipiscing metus eget magna viverra convallis.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 article">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere leo libero, vel egestas odio ultrices lacinia. Vestibulum congue, dui varius sollicitudin eleifend, turpis leo aliquam metus, a facilisis magna augue sit amet lacus. Proin ultricies aliquet urna, vitae bibendum augue iaculis eget. Suspendisse ac massa vulputate, venenatis nunc sed, pretium magna. Morbi consequat orci sed rhoncus dictum. Suspendisse gravida quam magna, id pharetra arcu feugiat non. Duis ac consectetur felis, ac sodales tellus. Morbi augue lorem, posuere mollis enim ut, euismod sodales quam. Vivamus cursus magna non dapibus tristique. Pellentesque ac mi quis ante convallis accumsan. Donec rhoncus ut turpis nec feugiat. Duis adipiscing metus eget magna viverra convallis.
+        </div>
+      </div>
+    </section>
+    <div class="footer">
+      <p>&copy; Jean Detoeuf</p>
+    </div>
+    <script src="bower_components/holderjs/holder.js"></script>
