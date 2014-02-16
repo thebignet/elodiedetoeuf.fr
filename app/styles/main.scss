@@ -116,6 +116,7 @@ div.banner {
   height: $banner-height;
   margin-left:auto;
   margin-right:auto;
+  padding-top:20px;
 }
 
 header{
@@ -144,13 +145,10 @@ div.row{
     margin-top: 10px;
 }
 
-
-/* Image faire part */
-div.fairePart {
-    margin-top:20px;
-    margin-bottom:10px;
-}
-
 body {
     background: #F7F5F5;
+}
+
+div#accueil {
+    font-size: 18px;
 }
