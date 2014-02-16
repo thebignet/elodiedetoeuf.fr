@@ -1,4 +1,18 @@
 <div class="container">
-	<img src="images/jeanElodie.png" class="img-thumbnail fairePart"/>
-	<img src="images/jeanElodieVerso.png" class="img-thumbnail fairePart"/>
+	<div class="fairePart">
+		<p class="text-center">Mariage de Jean et Elodie</p>
+		<flex-slider slide="s in slidesJeanElodie" animation="slide" slideshow="false">
+			<li>
+				<img ng-src="images/{{s}}">
+			</li>
+		</flex-slider>
+	</div>
+	<div class="fairePart">
+		<p class="text-center">Mariage de Kevin et Noémie</p>
+		<flex-slider slide="s in slidesKevinNoemie" animation="slide" slideshow="false">
+			<li>
+				<img ng-src="images/{{s}}">
+			</li>
+		</flex-slider>
+	</div>
 </div>

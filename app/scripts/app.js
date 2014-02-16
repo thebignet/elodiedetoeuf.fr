@@ -5,8 +5,8 @@ angular.module('testYeomanApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ui.bootstrap',
-  'mgcrea.ngStrap.affix'
+  'mgcrea.ngStrap.affix',
+  'angular-flexslider'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -24,7 +24,7 @@ angular.module('testYeomanApp', [
       })
       .when('/portfolio', {
         templateUrl: 'views/portfolio.html',
-        controller: 'MainCtrl'
+        controller: 'PortfolioCtrl'
       })
       .when('/tarifs', {
         templateUrl: 'views/tarifs.html',

@@ -1,19 +1,22 @@
 'use strict';
 
-describe('Controller: NavCtrl', function () {
+describe('Controller: PortfolioCtrl', function () {
 
   // load the controller's module
   beforeEach(module('testYeomanApp'));
 
-  var NavCtrl,
+  var PortfolioCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    NavCtrl = $controller('NavCtrl', {
+    PortfolioCtrl = $controller('PortfolioCtrl', {
       $scope: scope
     });
   }));
 
+  it('should attach a list of awesomeThings to the scope', function () {
+    expect(scope.awesomeThings.length).toBe(3);
+  });
 });
