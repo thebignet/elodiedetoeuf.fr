@@ -111,11 +111,9 @@ $navbar-height: 50px;
     font-family: 'Antic Didone', serif;
 }
 
-$carousel-height: 400px;
-.carousel img {
-  width: auto;
-  height: $carousel-height;
-  max-height: $carousel-height;
+$banner-height: 200px;
+div.banner {
+  height: $banner-height;
   margin-left:auto;
   margin-right:auto;
 }
