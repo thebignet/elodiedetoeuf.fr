@@ -169,3 +169,11 @@ p {
     margin-bottom: 30px;
 }
 
+@media (min-width: $screen-sm-min) {
+    .navbar-nav{
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+        float:none;
+    }
+}
