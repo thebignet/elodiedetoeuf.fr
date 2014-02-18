@@ -157,8 +157,12 @@ body {
     background: #F7F5F5;
 }
 
-div#accueil, div#auteur, div#tarifs {
+div.texte {
     font-size: 18px;
+}
+
+div.first.row {
+    margin-top:30px
 }
 
 
