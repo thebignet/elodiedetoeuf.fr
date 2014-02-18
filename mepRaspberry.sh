@@ -1,3 +1,4 @@
+grunt build
 tar cvf dist.tar dist/;
 gzip -f dist.tar;
 scp dist.tar.gz pi@192.168.1.47:/tmp/
