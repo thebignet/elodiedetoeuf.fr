@@ -13,12 +13,8 @@ angular.module('testYeomanApp')
 	$scope.goTo = function(link){
 		$location.path(link);
 	};
-	$rootScope.$on('$locationChangeStart', function (event, next, current) {
+	$rootScope.$on('$locationChangeStart', function () {
 		setActive($location.path());
-		console.log('change route '+$location.path());
-		console.log(event);
-		console.log(next);
-		console.log(current);
 	});
 	function setActive(route){
 		_.each($scope.menus,function(item){
