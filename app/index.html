@@ -43,7 +43,9 @@
           </div>
           <nav class="collapse navbar-collapse" role="navigation">
             <ul id="menu" class="nav navbar-nav">
-                <li ng-cloak ng-repeat="menu in menus"><a ng-click="goTo(menu.link)">{{menu.titre | uppercase}}</a></li>
+                <li ng-repeat="menu in menus" ng-class="{active:menu.active}">
+                  <a ng-click="goTo(menu.link)" ng-bind="menu.titre | uppercase"></a>
+                </li>
             </ul>
           </nav>
         </div>
@@ -77,6 +79,7 @@
     <script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>
     <script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
     <script src="bower_components/angular-flexslider/angular-flexslider.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <script src="bower_components/flexslider/jquery.flexslider.js"></script>
