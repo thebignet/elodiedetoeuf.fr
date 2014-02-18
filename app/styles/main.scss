@@ -1,5 +1,13 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
+$navbar-inverse-link-color:                 #eee !default;
+$gray-light:             lighten(#000, 60%) !default;   // #999
+$navbar-inverse-link-hover-color:           $gray-light !default;
+$navbar-inverse-link-hover-bg:              transparent !default;
+$navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
+$navbar-inverse-link-disabled-color:        #444 !default;
+$navbar-inverse-link-disabled-bg:           transparent !default;
+
 @import 'sass-bootstrap/lib/bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Antic+Didone);
 
@@ -149,6 +157,8 @@ body {
     background: #F7F5F5;
 }
 
-div#accueil {
+div#accueil, div#auteur, div#tarifs {
     font-size: 18px;
 }
+
+
