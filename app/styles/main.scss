@@ -127,10 +127,6 @@ div.banner {
   padding-top:20px;
 }
 
-header{
-    margin-bottom:50px;
-}
-
 section{
     margin-bottom: 30px;
     margin-top: -1*$navbar-height;
@@ -153,10 +149,6 @@ div.row{
     margin-top: 10px;
 }
 
-div.first.row {
-    margin-top:40px
-}
-
 body {
     background: #F7F5F5;
 }
@@ -171,5 +163,9 @@ nav li {
 
 p {
     margin: 0 0 20px;
+}
+
+#navbar {
+    margin-bottom: 30px;
 }
 
