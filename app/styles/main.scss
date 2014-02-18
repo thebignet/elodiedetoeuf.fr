@@ -56,22 +56,8 @@ $navbar-inverse-link-disabled-bg:           transparent !default;
     border-bottom: 1px solid #e5e5e5;
 }
 
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-}
-
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-}
-
-.marketing p + h4 {
-    margin-top: 28px;
-}
-
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $screen-sm-min) {
     .container {
         max-width: 730px;
     }
@@ -125,6 +111,7 @@ div.banner {
   margin-left:auto;
   margin-right:auto;
   padding-top:20px;
+  margin-bottom:20px;
 }
 
 section{
@@ -176,4 +163,9 @@ p {
         table-layout: fixed;
         float:none;
     }
+}
+
+.banner p {
+    font-style: italic;
+    font-size: 17px;
 }
