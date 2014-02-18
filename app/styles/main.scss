@@ -153,6 +153,10 @@ div.row{
     margin-top: 10px;
 }
 
+div.first.row {
+    margin-top:30px
+}
+
 body {
     background: #F7F5F5;
 }
@@ -161,8 +165,7 @@ div.texte {
     font-size: 18px;
 }
 
-div.first.row {
-    margin-top:30px
+nav li {
+    cursor: pointer;
 }
-
 
