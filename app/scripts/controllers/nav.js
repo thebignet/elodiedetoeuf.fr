@@ -4,9 +4,9 @@
 angular.module('aVotreImage')
 .controller('NavCtrl', function ($scope,$location,$rootScope) {
 	$scope.menus = [
-		{'link':'/', 'titre':'Accueil'},
-		{'link':'/auteur', 'titre':'Auteur'},
+		{'link':'/', 'titre':'Concept'},
 		{'link':'/galerie', 'titre':'Galerie'},
+		{'link':'/auteur', 'titre':'Auteur'},
 		{'link':'/tarifs', 'titre':'Tarifs'},
 		{'link':'/contact', 'titre':'Contact'}
 	];
