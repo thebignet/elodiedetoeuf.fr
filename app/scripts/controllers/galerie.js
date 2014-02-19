@@ -1,12 +1,7 @@
 'use strict';
 
-angular.module('testYeomanApp')
-.controller('PortfolioCtrl', function ($scope) {
-  $scope.awesomeThings = [
-    'HTML5 Boilerplate',
-    'AngularJS',
-    'Karma'
-  ];
+angular.module('aVotreImage')
+.controller('GalerieCtrl', function ($scope) {
   $scope.slidesJeanElodie = [
     'jeanElodie1.png',
     'jeanElodie2.png',

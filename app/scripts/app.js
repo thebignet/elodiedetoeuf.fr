@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('testYeomanApp', [
+angular.module('aVotreImage', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -22,9 +22,9 @@ angular.module('testYeomanApp', [
         templateUrl: 'views/contact.html',
         controller: 'MainCtrl'
       })
-      .when('/portfolio', {
-        templateUrl: 'views/portfolio.html',
-        controller: 'PortfolioCtrl'
+      .when('/galerie', {
+        templateUrl: 'views/galerie.html',
+        controller: 'GalerieCtrl'
       })
       .when('/tarifs', {
         templateUrl: 'views/tarifs.html',

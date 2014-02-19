@@ -1,12 +1,12 @@
 /*global _:false */
 'use strict';
 
-angular.module('testYeomanApp')
+angular.module('aVotreImage')
 .controller('NavCtrl', function ($scope,$location,$rootScope) {
 	$scope.menus = [
 		{'link':'/', 'titre':'Accueil'},
 		{'link':'/auteur', 'titre':'Auteur'},
-		{'link':'/portfolio', 'titre':'Portfolio'},
+		{'link':'/galerie', 'titre':'Galerie'},
 		{'link':'/tarifs', 'titre':'Tarifs'},
 		{'link':'/contact', 'titre':'Contact'}
 	];
