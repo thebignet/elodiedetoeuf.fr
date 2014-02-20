@@ -6,7 +6,7 @@ angular.module('aVotreImage')
 	$scope.menus = [
 		{'link':'/', 'titre':'Concept'},
 		{'link':'/galerie', 'titre':'Galerie'},
-		{'link':'/auteur', 'titre':'Auteur'},
+		{'link':'/illustratrice', 'titre':'L\'illustratrice'},
 		{'link':'/tarifs', 'titre':'Tarifs'},
 		{'link':'/contact', 'titre':'Contact'}
 	];

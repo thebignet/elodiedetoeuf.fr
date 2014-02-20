@@ -14,8 +14,8 @@ angular.module('aVotreImage', [
         templateUrl: 'views/concept.html',
         controller: 'MainCtrl'
       })
-      .when('/auteur', {
-        templateUrl: 'views/auteur.html',
+      .when('/illustratrice', {
+        templateUrl: 'views/illustratrice.html',
         controller: 'MainCtrl'
       })
       .when('/contact', {
