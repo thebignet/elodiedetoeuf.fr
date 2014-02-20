@@ -28,7 +28,7 @@ angular.module('aVotreImage', [
       })
       .when('/tarifs', {
         templateUrl: 'views/tarifs.html',
-        controller: 'MainCtrl'
+        controller: 'TarifCtrl'
       })
       .otherwise({
         redirectTo: '/'

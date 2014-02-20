@@ -5,35 +5,16 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-4" ng-repeat="tarif in tarifs">
 			<div class="panel panel-default text-center">
 				<div class="panel-heading">
-					<h3 class="panel-title"><strong>Coup de crayon</strong></h3>
+					<h3 class="panel-title"><strong ng-bind="tarif.nom"/></h3>
 				</div>
 				<div class="panel-body">
-					<span>1<br/>illustration<br/>200 &euro;</span>
+					<p ng-bind="tarif.nb"/>
+					<p>illustration<ng-pluralize count="tarif.nb" when="{'one': '', 'other': 's'}"/></p>
+					<p><span ng-bind="tarif.prix"/> &euro;</span>
 				</div>
 			</div>
 		</div>
-		<div class="col-md-4">
-			<div class="panel panel-default text-center">
-				<div class="panel-heading">
-					<h3 class="panel-title"><strong>Coup de pinceau</strong></h3>
-				</div>
-				<div class="panel-body">
-					<span>2<br/>illustrations<br/>300 &euro;</span>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="panel panel-default text-center">
-				<div class="panel-heading">
-					<h3 class="panel-title"><strong>Coup de foudre</strong></h3>
-				</div>
-				<div class="panel-body">
-					<span>3<br/>illustrations<br/>400 &euro;</span>
-				</div>
-			</div>
-		</div>
-	</div>
 </div>
