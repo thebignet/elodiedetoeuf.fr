@@ -10,6 +10,7 @@ $navbar-inverse-link-disabled-bg:           transparent !default;
 
 @import 'sass-bootstrap/lib/bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Antic+Didone);
+@import url(https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Bad+Script);
 
 .browsehappy {
     margin: 0.2em 0;
@@ -180,4 +181,9 @@ p {
 div.medaillon {
     margin-left:30px;
     margin-bottom:20px;
+}
+
+div.nom-illustratrice {
+    font-family: 'Bad Script', serif;
+    font-size: 30px;
 }
