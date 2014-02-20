@@ -11,7 +11,7 @@
 					<h3 class="panel-title"><strong ng-bind="tarif.nom"></strong></h3>
 				</div>
 				<div class="panel-body">
-					<p><span ng-bind="tarif.nb"></span> illustration<ng-pluralize count="tarif.nb" when="{'one': '', 'other': 's'}"/></p>
+					<p><span ng-bind="tarif.nb"></span> illustration<ng-pluralize count="tarif.nb" when="{'one': '', 'other': 's'}"></ng-pluralize> :</p>
 					<p><span ng-bind="tarif.prix"></span> &euro;</p>
 				</div>
 			</div>
