@@ -155,9 +155,13 @@ header {
     background-repeat:repeat-x;
 }
 
+$nom-rot: -13deg;
 .banner p{
-    font-family: 'Handlee', serif;
-    text-shadow: 2px 2px 4px #999;
+    font-family: 'Dr Sugiyama', serif;
+    -moz-transform:rotate($nom-rot);
+    -webkit-transform:rotate($nom-rot); 
+    -o-transform:rotate($nom-rot);
+    -ms-transform : rotate($nom-rot) 
 }
 
 @media (min-width: $screen-sm-min) {
@@ -168,21 +172,22 @@ header {
         float:none;
     }
     .banner p {
-        font-size: 110px;
+        font-size: 70px;
     }
     $banner-height: 250px;
     div.banner {
       height: $banner-height;
       margin-left:auto;
       margin-right:auto;
-      padding-top:94px;
+      padding-top:70px;
+      padding-left:95px;
       margin-bottom:40px;
     }
 }
 
 @media (max-width: $screen-xs-max) {
     .banner p {
-        font-size: 10px;
+        font-size: 20px;
     }
 }
 
