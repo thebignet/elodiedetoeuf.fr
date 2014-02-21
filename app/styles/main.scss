@@ -9,8 +9,9 @@ $navbar-inverse-link-disabled-color:        #444 !default;
 $navbar-inverse-link-disabled-bg:           transparent !default;
 
 @import 'sass-bootstrap/lib/bootstrap';
-@import url(http://fonts.googleapis.com/css?family=Antic+Didone);
+@import url(http://fonts.googleapis.com/css?family=Handlee);
 @import url(https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Bad+Script);
+@import url(http://fonts.googleapis.com/css?family=Dr+Sugiyama);
 
 .browsehappy {
     margin: 0.2em 0;
@@ -148,8 +149,15 @@ p {
     margin-bottom: 30px;
 }
 
-.banner p {
-    font-style: italic;
+header {
+    background-image:url('/images/bandeau.png');
+    background-position:center top;
+    background-repeat:repeat-x;
+}
+
+.banner p{
+    font-family: 'Handlee', serif;
+    text-shadow: 2px 2px 4px #999;
 }
 
 @media (min-width: $screen-sm-min) {
@@ -160,14 +168,14 @@ p {
         float:none;
     }
     .banner p {
-        font-size: 17px;
+        font-size: 110px;
     }
-    $banner-height: 200px;
+    $banner-height: 250px;
     div.banner {
       height: $banner-height;
       margin-left:auto;
       margin-right:auto;
-      padding-top:20px;
+      padding-top:94px;
       margin-bottom:40px;
     }
 }
