@@ -5,7 +5,6 @@ angular.module('aVotreImage', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'mgcrea.ngStrap.affix',
   'angular-flexslider'
 ])
   .config(function ($routeProvider) {
