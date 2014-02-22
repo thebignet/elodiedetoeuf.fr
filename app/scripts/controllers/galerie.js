@@ -5,7 +5,8 @@ angular.module('aVotreImage')
   $scope.slidesJeanElodie = [
     'jeanElodie1.png',
     'jeanElodie2.png',
-    'jeanElodie3.png'
+    'jeanElodie3.png',
+    'jeanElodie4.jpg'
   ];
   $scope.slidesKevinNoemie = [
     'kevinNoemie1.png',
