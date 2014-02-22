@@ -154,16 +154,19 @@ header {
     background-repeat:repeat-x;
 }
 
-$nom-rot: -13deg;
 .banner p{
     font-family: 'Dr Sugiyama', serif;
+}
+
+$nom-rot: -13deg;
+.banner p{
     -moz-transform:rotate($nom-rot);
     -webkit-transform:rotate($nom-rot); 
     -o-transform:rotate($nom-rot);
     -ms-transform : rotate($nom-rot) 
 }
 
-$banner-height: 250px;
+$banner-height: 210px;
 div.banner {
   height: $banner-height;
   margin-left:auto;
@@ -180,15 +183,14 @@ div.banner {
         table-layout: fixed;
         float:none;
     }
-    .banner p {
-        font-size: 70px;
-    }
 }
 
-@media (max-width: $screen-xs-max) {
-    .banner p {
-        font-size: 40px;
-    }
+.banner p {
+    font-size: 70px;
+}
+.sous-titre p {
+    font-style: italic;
+    font-size: 14px;
 }
 
 div.medaillon {
@@ -211,4 +213,5 @@ p.asterisque {
 
 .panel-title {
     font-size: 20px;
+    font-weight: bold;
 }
