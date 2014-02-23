@@ -1,4 +1,5 @@
 /*global _:false */
+/*global $:false */
 'use strict';
 
 angular.module('aVotreImage')
@@ -25,4 +26,7 @@ angular.module('aVotreImage')
 			item.active=(item.href===route);
 		});
 	}
+	$scope.activate = function(){
+		$('.dropdown-toggle').dropdown();
+	};
 });
