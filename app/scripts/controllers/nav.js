@@ -4,21 +4,25 @@
 angular.module('aVotreImage')
 .controller('NavCtrl', function ($scope,$location,$rootScope) {
 	$scope.menus = [
-		{'link':'/', 'titre':'Concept'},
-		{'link':'/galerie', 'titre':'Galerie'},
-		{'link':'/illustratrice', 'titre':'L\'illustratrice'},
-		{'link':'/tarifs', 'titre':'Tarifs'},
-		{'link':'/contact', 'titre':'Contact'}
+		{'href':'/', 'text':'Concept'},
+		{'href':'/galerie','text':'Galerie', 'menus':[
+			{'href':'/mariage', 'text':'Mariage'},
+			{'href':'/bapteme', 'text':'Bapteme'},
+			{'href':'/babyshower', 'text':'Baby shower'}
+		]},
+		{'href':'/illustratrice', 'text':'L\'illustratrice'},
+		{'href':'/tarifs', 'text':'Tarifs'},
+		{'href':'/contact', 'text':'Contact'}
 	];
-	$scope.goTo = function(link){
-		$location.path(link);
+	$scope.goTo = function(href){
+		$location.path(href);
 	};
 	$rootScope.$on('$locationChangeStart', function () {
 		setActive($location.path());
 	});
 	function setActive(route){
 		_.each($scope.menus,function(item){
-			item.active=(item.link===route);
+			item.active=(item.href===route);
 		});
 	}
 });

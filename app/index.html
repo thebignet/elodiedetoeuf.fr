@@ -39,7 +39,7 @@
           </div>
         </div>
       </div>
-      <div id="navbar" class="navbar navbar-inverse relative" role="banner" data-offset-top="300" bs-affix>
+      <div id="navbar" class="navbar navbar-inverse relative" role="navigation" data-offset-top="300" bs-affix>
         <div class="container">
           <div class="navbar-header">
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
@@ -51,9 +51,9 @@
           </div>
           <nav class="collapse navbar-collapse" role="navigation">
             <ul id="menu" class="nav navbar-nav">
-                <li ng-repeat="menu in menus" ng-class="{active:menu.active}">
-                  <a ng-click="goTo(menu.link)" ng-bind="menu.titre | uppercase"></a>
-                </li>
+              <li ng-repeat="menu in menus" ng-class="{active:menu.active,dropdown:menu.menus.length>0}">
+                <a ng-click="goTo(menu.href)" ng-bind="menu.text | uppercase"></a>
+              </li>
             </ul>
           </nav>
         </div>
