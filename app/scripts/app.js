@@ -21,8 +21,16 @@ angular.module('aVotreImage', [
         templateUrl: 'views/contact.html',
         controller: 'MainCtrl'
       })
-      .when('/galerie', {
-        templateUrl: 'views/galerie.html',
+      .when('/mariage', {
+        templateUrl: 'views/mariage.html',
+        controller: 'GalerieCtrl'
+      })
+      .when('/bapteme', {
+        templateUrl: 'views/bapteme.html',
+        controller: 'GalerieCtrl'
+      })
+      .when('/babyshower', {
+        templateUrl: 'views/babyshower.html',
         controller: 'GalerieCtrl'
       })
       .when('/tarifs', {

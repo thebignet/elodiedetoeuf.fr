@@ -20,13 +20,11 @@ angular.module('aVotreImage')
 	};
 	$rootScope.$on('$locationChangeStart', function () {
 		setActive($location.path());
+		$('.dropdown-toggle').dropdown();
 	});
 	function setActive(route){
 		_.each($scope.menus,function(item){
 			item.active=(item.href===route);
 		});
 	}
-	$scope.activate = function(){
-		$('.dropdown-toggle').dropdown();
-	};
 });
