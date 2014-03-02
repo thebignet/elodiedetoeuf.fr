@@ -148,49 +148,23 @@ p {
     margin-bottom: 30px;
 }
 
-header {
-    background-image:url('../images/bandeau.png');
-    background-position:center top;
-    background-repeat:repeat-x;
+.banner {
+  background: #000;
 }
 
-.banner p{
-    font-family: 'Dr Sugiyama', serif;
+.banner img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
 }
 
-$nom-rot: -13deg;
-.banner p{
-    -moz-transform:rotate($nom-rot);
-    -webkit-transform:rotate($nom-rot); 
-    -o-transform:rotate($nom-rot);
-    -ms-transform : rotate($nom-rot) 
-}
-
-$banner-height: 210px;
-div.banner {
-  height: $banner-height;
-  margin-left:auto;
-  margin-right:auto;
-  padding-top:70px;
-  padding-left:95px;
-  margin-bottom:40px;
-}
-
-@media (min-width: $screen-sm-min) {
+@media (min-width: $screen-xs-min) {
     .navbar-nav{
         margin: 0 auto;
         display: table;
         table-layout: fixed;
         float:none;
     }
-}
-
-.banner p {
-    font-size: 70px;
-}
-.sous-titre p {
-    font-style: italic;
-    font-size: 14px;
 }
 
 div.medaillon {
