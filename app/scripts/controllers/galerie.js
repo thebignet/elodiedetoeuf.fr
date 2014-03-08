@@ -21,4 +21,7 @@ angular.module('aVotreImage')
   $scope.slidesBaptemeCarla = [
     'baptemeCarla.png'
   ];
+  $scope.slidesBabyShower = [
+    'babyShower.png'
+  ];
 });

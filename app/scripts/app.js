@@ -5,7 +5,8 @@ angular.module('aVotreImage', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'angular-flexslider'
+  'angular-flexslider',
+  'piwik'
 ])
   .config(function ($routeProvider) {
     $routeProvider

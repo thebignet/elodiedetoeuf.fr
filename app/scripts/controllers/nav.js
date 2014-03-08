@@ -3,7 +3,7 @@
 'use strict';
 
 angular.module('aVotreImage')
-.controller('NavCtrl', function ($scope,$location,$rootScope) {
+.controller('NavCtrl', function ($scope,$location,$rootScope,Piwik) {
 	$scope.menus = [
 		{'href':'/', 'text':'Concept'},
 		{'href':'/galerie','text':'Galerie', 'menus':[
@@ -27,4 +27,5 @@ angular.module('aVotreImage')
 			item.active=(item.href===route);
 		});
 	}
+	Piwik.trackPageView();
 });
