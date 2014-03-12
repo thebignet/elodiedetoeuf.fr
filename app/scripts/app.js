@@ -11,7 +11,7 @@ angular.module('aVotreImage', [
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/concept.html',
+        templateUrl: 'views/presentation.html',
         controller: 'MainCtrl'
       })
       .when('/illustratrice', {

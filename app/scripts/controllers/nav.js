@@ -5,7 +5,7 @@
 angular.module('aVotreImage')
 .controller('NavCtrl', function ($scope,$location,$rootScope,Piwik) {
 	$scope.menus = [
-		{'href':'/', 'text':'Concept'},
+		{'href':'/', 'text':'Présentation'},
 		{'href':'/galerie','text':'Galerie', 'menus':[
 			{'href':'/mariage', 'text':'Mariage'},
 			{'href':'/bapteme', 'text':'Bapteme'},
