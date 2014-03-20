@@ -20,7 +20,13 @@ angular.module('aVotreImage')
 	};
 	$rootScope.$on('$locationChangeStart', function () {
 		setActive($location.path());
+		//Création de la fonction dropdown sur le menu (gros hack)
 		$('.dropdown-toggle').dropdown();
+		var location = $location.path();
+		if(location !== ''){
+			Piwik.setDocumentTitle($location.path());
+			Piwik.trackPageView();
+		}
 	});
 	function setActive(route){
 		_.each($scope.menus,function(item){
