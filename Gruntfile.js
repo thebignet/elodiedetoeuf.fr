@@ -288,7 +288,7 @@ module.exports = function (grunt) {
             'bower_components/**/*.map',
             'bower_components/**/*.css',
             'images/{,*/}*.{webp}',
-            'fonts/*'
+            '**/fonts/*'
           ]
         }, {
           expand: true,
