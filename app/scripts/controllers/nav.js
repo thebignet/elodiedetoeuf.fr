@@ -33,5 +33,4 @@ angular.module('aVotreImage')
 			item.active=(item.href===route);
 		});
 	}
-	Piwik.trackPageView();
 });
