@@ -18,9 +18,6 @@ angular.module('aVotreImage')
     'kevinNoemie7.jpg',
     'kevinNoemie8.jpg'
   ];
-  $scope.slidesBaptemeCarla = [
-    'baptemeCarla.png'
-  ];
   $scope.slidesBabyShower = [
     'babyShower.png'
   ];

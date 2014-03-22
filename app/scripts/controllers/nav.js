@@ -8,7 +8,6 @@ angular.module('aVotreImage')
 		{'href':'/', 'text':'Présentation'},
 		{'href':'/galerie','text':'Galerie', 'menus':[
 			{'href':'/mariage', 'text':'Mariage'},
-			{'href':'/bapteme', 'text':'Bapteme'},
 			{'href':'/babyshower', 'text':'Baby shower'}
 		]},
 		{'href':'/illustratrice', 'text':'L\'illustratrice'},
