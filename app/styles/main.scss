@@ -109,6 +109,12 @@ $navbar-height: 50px;
     font-family: 'Antic Didone', serif;
 }
 
+$margin-size: 60px;
+.container{
+    padding-left: $margin-size !important;
+    padding-right: $margin-size !important;
+}
+
 section{
     margin-bottom: 30px;
     margin-top: -1*$navbar-height;
