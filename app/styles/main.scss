@@ -204,9 +204,15 @@ div.etape {
 
 @media (min-width: $screen-sm-min) {
     $nav-height:60px;
+    $padding:$nav-height/2;
     .navbar-nav > li > a {
-        padding-top:$nav-height/2 !important;
-        padding-bottom:$nav-height/2 !important;
+        padding-top:$padding;
+        padding-bottom:$padding/2;
+    }
+    $offset:5px;
+    $paddingTopHover:$padding - $offset;
+    .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+        padding-top:$paddingTopHover !important;
     }
 }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
@@ -216,4 +222,17 @@ div.etape {
 a.navbar-brand {
     padding-top: 5px !important;
     padding-bottom: 5px !important;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #ed217c !important;
+    text-shadow: 0px 0px 5px #ed217c;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
