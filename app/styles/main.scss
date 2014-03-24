@@ -202,16 +202,18 @@ div.etape {
     padding: 0 !important;
 }
 
-$nav-height:60px;
-.navbar-nav > li > a {
-    padding-top:$nav-height/2 !important;
-    padding-bottom:$nav-height/2 !important;
+@media (min-width: $screen-sm-min) {
+    $nav-height:60px;
+    .navbar-nav > li > a {
+        padding-top:$nav-height/2 !important;
+        padding-bottom:$nav-height/2 !important;
+    }
 }
-
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
     background: none !important;
 }
 
 a.navbar-brand {
     padding-top: 5px !important;
+    padding-bottom: 5px !important;
 }
