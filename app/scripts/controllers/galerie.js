@@ -9,14 +9,11 @@ angular.module('aVotreImage')
     'jeanElodie4.jpg'
   ];
   $scope.slidesKevinNoemie = [
-    'kevinNoemie1.png',
-    'kevinNoemie2.png',
-    'kevinNoemie3.png',
+    'kevinNoemie1.jpg',
+    'kevinNoemie2.jpg',
+    'kevinNoemie3.jpg',
     'kevinNoemie4.jpg',
-    'kevinNoemie5.jpg',
-    'kevinNoemie6.jpg',
-    'kevinNoemie7.jpg',
-    'kevinNoemie8.jpg'
+    'kevinNoemie5.jpg'
   ];
   $scope.slidesBabyShower = [
     'babyShower.png'

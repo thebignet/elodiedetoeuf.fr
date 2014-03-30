@@ -230,10 +230,16 @@ a.navbar-brand {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition: color text-shadow padding-top 0.3s ease-in-out;
+    -moz-transition: color text-shadow padding-top 0.3s ease-in-out;
+    -o-transition: color text-shadow padding-top 0.3s ease-in-out;
+    -ms-transition: color text-shadow padding-top 0.3s ease-in-out;
+    transition: color text-shadow padding-top 0.3s ease-in-out;
     text-transform: uppercase;
+}
+
+@media (max-width: $screen-sm-max) {
+    .navbar-inverse .navbar-nav > li > a {
+        font-size:80%;
+    }    
 }
