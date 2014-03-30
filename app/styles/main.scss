@@ -7,10 +7,18 @@ $navbar-inverse-link-hover-bg:              transparent !default;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
 $navbar-inverse-link-disabled-color:        #444 !default;
 $navbar-inverse-link-disabled-bg:           transparent !default;
+$rose:#ed217c;
 
 @import 'sass-bootstrap/lib/bootstrap';
-@import url(https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Bad+Script);
+@import url(http://fonts.googleapis.com/css?family=Bad+Script);
 @import url(http://fonts.googleapis.com/css?family=Dr+Sugiyama);
+
+@font-face {
+  font-family: 'ChunkFive';
+  src: local('ChunkFive-Roman'), url('Chunkfive.woff') format('woff'), url('/fonts/Chunkfive.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .browsehappy {
     margin: 0.2em 0;
@@ -214,19 +222,28 @@ div.etape {
     .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
         padding-top:$paddingTopHover !important;
     }
-}
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    background: none !important;
+    .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+        color: #ed217c !important;
+        text-shadow: 0px 0px 5px $rose;
+    }
+    .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+        background: none !important;
+    }
+    div#logo {
+        font-size:28px;
+    }
+    div#logo > .prenom {
+        top:6px;
+    }
+    div#logo > .nom {
+        top:26px;
+        left:-10px;
+    }
 }
 
 a.navbar-brand {
     padding-top: 5px !important;
     padding-bottom: 5px !important;
-}
-
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-    color: #ed217c !important;
-    text-shadow: 0px 0px 5px #ed217c;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -242,4 +259,24 @@ a.navbar-brand {
     .navbar-inverse .navbar-nav > li > a {
         font-size:80%;
     }    
+    div#logo {
+        font-size:20px;
+    }
+    div#logo > .prenom {
+        top:8px;
+    }
+    div#logo > .nom {
+        top:21px;
+        left:-7px;
+    }
+}
+
+/* Logo */
+div#logo {
+    font-family: ChunkFive, serif;
+    color:$rose;
+}
+div#logo > div {
+    position: relative;
+    float:left;
 }
