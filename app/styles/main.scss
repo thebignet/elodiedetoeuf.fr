@@ -247,18 +247,28 @@ a.navbar-brand {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    -webkit-transition: color text-shadow padding-top 0.3s ease-in-out;
-    -moz-transition: color text-shadow padding-top 0.3s ease-in-out;
-    -o-transition: color text-shadow padding-top 0.3s ease-in-out;
-    -ms-transition: color text-shadow padding-top 0.3s ease-in-out;
-    transition: color text-shadow padding-top 0.3s ease-in-out;
+    -webkit-transition-property: color, text-shadow, padding-top;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-property: color, text-shadow, padding-top;
+    -moz-transition-duration: 0.3s;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-property: color, text-shadow, padding-top;
+    -o-transition-duration: 0.3s;
+    -o-transition-timing-function: ease-in-out;
+    -ms-transition-property: color, text-shadow, padding-top;
+    -ms-transition-duration: 0.3s;
+    -ms-transition-timing-function: ease-in-out;
+    transition-property: color, text-shadow, padding-top;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
     text-transform: uppercase;
 }
 
 @media (max-width: $screen-sm-max) {
     .navbar-inverse .navbar-nav > li > a {
         font-size:80%;
-    }    
+    }
     div#logo {
         font-size:20px;
     }
