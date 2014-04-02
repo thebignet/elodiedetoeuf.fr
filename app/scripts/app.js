@@ -41,4 +41,7 @@ angular.module('aVotreImage', [
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .config(['$location', function($location) {
+    $location.hashPrefix('!');
+  }]);
