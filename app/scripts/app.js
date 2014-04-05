@@ -8,7 +8,8 @@ angular.module('aVotreImage', [
   'angular-flexslider',
   'piwik'
 ])
-  .config(function ($routeProvider) {
+  .config(['$locationProvider','$routeProvider',function ($locationProvider,$routeProvider) {
+    $locationProvider.html5Mode(true).hashPrefix('!');
     $routeProvider
       .when('/', {
         templateUrl: 'views/presentation.html',
@@ -41,7 +42,4 @@ angular.module('aVotreImage', [
       .otherwise({
         redirectTo: '/'
       });
-  })
-  .config(['$location', function($location) {
-    $location.hashPrefix('!');
   }]);
