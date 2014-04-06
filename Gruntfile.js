@@ -290,7 +290,7 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>',
           src: [
-            '*.{ico,png,txt}',
+            '*.{ico,png,txt,xml}',
             '.htaccess',
             '*.html',
             'CNAME',
@@ -371,6 +371,8 @@ module.exports = function (grunt) {
           snapshotPath: 'dist/snapshots/',
           sitePath: 'http://127.0.0.1:9000/',
           fileNamePrefix: 'sp_',
+          removeScripts: true,
+          removeLinkTags: true,
           msWaitForPages: 1000,
           urls: [
             '',
