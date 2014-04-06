@@ -62,7 +62,16 @@
     <div ng-view=""></div>
 
   <div class="footer">
-    <p>&copy; 2014</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          &copy; 2014
+        </div>
+        <div class="col-md-6 text-right">
+          <div class="fb-like" data-href="http://elodiedetoeuf.fr" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
     <!--[if lt IE 9]>
@@ -98,5 +107,23 @@
     <script src="scripts/controllers/galerie.js"></script>
     <script src="scripts/controllers/tarif.js"></script>
     <!-- endbuild -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '612018645552681',
+          status     : true,
+          xfbml      : true
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 </body>
 </html>
