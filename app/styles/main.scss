@@ -286,8 +286,19 @@ a.navbar-brand {
 div#logo {
     font-family: ChunkFive, serif;
     color:$rose;
+    // Hack from http://stackoverflow.com/questions/21948022/font-face-text-is-invisible-in-chrome-on-refresh-but-not-always
+    -webkit-animation-duration: 0.1s;
+    -webkit-animation-name: fontfix;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0.1s;
 }
 div#logo > div {
     position: relative;
     float:left;
+}
+
+@-webkit-keyframes fontfix{
+    from{   opacity: 1; }
+    to{ opacity: 1; }
 }
