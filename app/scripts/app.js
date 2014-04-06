@@ -9,7 +9,8 @@ angular.module('aVotreImage', [
   'piwik'
 ])
   .config(['$locationProvider','$routeProvider',function ($locationProvider,$routeProvider) {
-    $locationProvider.html5Mode(true).hashPrefix('!');
+    $locationProvider.html5Mode(true);
+    $locationProvider.hashPrefix('!');
     $routeProvider
       .when('/', {
         templateUrl: 'views/presentation.html',

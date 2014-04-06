@@ -15,6 +15,8 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
+  var modRewrite = require('connect-modrewrite');
+
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -63,7 +65,16 @@ module.exports = function (grunt) {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
-        livereload: 35728
+        livereload: 35728,
+        middleware: function(connect, options) {
+          var middlewares = [];
+
+          middlewares.push(modRewrite(['^[^\\.]*$ /index.html [L]'])); //Matches everything that does not contain a '.' (period)
+          options.base.forEach(function(base) {
+            middlewares.push(connect.static(base));
+          });
+          return middlewares;
+        }
       },
       livereload: {
         options: {
@@ -86,7 +97,7 @@ module.exports = function (grunt) {
       },
       dist: {
         options: {
-          base: '<%= yeoman.dist %>'
+          base: ['<%= yeoman.dist %>']
         }
       }
     },
@@ -352,6 +363,26 @@ module.exports = function (grunt) {
         configFile: 'karma.conf.js',
         singleRun: true
       }
+    },
+
+    htmlSnapshot: {
+      prod: {
+        options: {
+          snapshotPath: 'dist/snapshots/',
+          sitePath: 'http://127.0.0.1:9000/',
+          fileNamePrefix: 'sp_',
+          msWaitForPages: 1000,
+          urls: [
+            '',
+            'illustratrice',
+            'contact',
+            'mariage',
+            'bapteme',
+            'babyshower',
+            'tarifs'
+          ]
+        }
+      }
     }
   });
 
@@ -399,6 +430,12 @@ module.exports = function (grunt) {
     'rev',
     'usemin',
     'htmlmin'
+  ]);
+
+  grunt.registerTask('snapshot', [
+    'build',
+    'connect:dist',
+    'htmlSnapshot'
   ]);
 
   grunt.registerTask('default', [

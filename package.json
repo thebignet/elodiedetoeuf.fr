@@ -31,7 +31,9 @@
     "grunt-karma": "~0.6.2",
     "karma-jasmine": "~0.1.5",
     "karma-chrome-launcher": "~0.1.2",
-    "karma-phantomjs-launcher": "~0.1.2"
+    "karma-phantomjs-launcher": "~0.1.2",
+    "grunt-html-snapshot": "~0.6.1",
+    "connect-modrewrite": "~0.6.4-pre"
   },
   "engines": {
     "node": ">=0.8.0"
