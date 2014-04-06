@@ -541,3 +541,30 @@ FileETag None
 # <IfModule mod_headers.c>
 #    Header set Connection Keep-Alive
 # </IfModule>
+
+# ------------------------------------------------------------------------------
+# | angularjs pushstate (history) support                                      |
+# ------------------------------------------------------------------------------
+
+# See http://www.josscrowcroft.com/2012/code/htaccess-for-html5-history-pushstate-url-routing/
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{QUERY_STRING} !^_escaped_fragment_=/?(.*)$
+    RewriteCond %{REQUEST_URI} !index
+    RewriteCond %{REQUEST_URI} !.*\.(css¦js|html|png)
+    RewriteRule (.*) index.html [L]
+</ifModule>
+
+# ------------------------------------------------------------------------------
+# | angularjs snapshots support                                                |
+# ------------------------------------------------------------------------------
+
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+    Options +FollowSymLinks
+    RewriteCond %{REQUEST_URI}  ^/$
+    RewriteCond %{QUERY_STRING} ^_escaped_fragment_=/?(.*)$
+    RewriteRule ^(.*)$ /snapshots/sp_%1.html [NC,L]
+</ifModule>
