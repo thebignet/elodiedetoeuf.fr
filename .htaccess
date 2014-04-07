@@ -543,28 +543,31 @@ FileETag None
 # </IfModule>
 
 # ------------------------------------------------------------------------------
-# | angularjs pushstate (history) support                                      |
-# ------------------------------------------------------------------------------
-
-# See http://www.josscrowcroft.com/2012/code/htaccess-for-html5-history-pushstate-url-routing/
-<ifModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{QUERY_STRING} !^_escaped_fragment_=/?(.*)$
-    RewriteCond %{REQUEST_URI} !index
-    RewriteCond %{REQUEST_URI} !.*\.(css¦js|html|png)
-    RewriteRule (.*) index.html [L]
-</ifModule>
-
-# ------------------------------------------------------------------------------
 # | angularjs snapshots support                                                |
 # ------------------------------------------------------------------------------
 
 <ifModule mod_rewrite.c>
     RewriteEngine On
     Options +FollowSymLinks
-    RewriteCond %{REQUEST_URI}  ^/$
-    RewriteCond %{QUERY_STRING} ^_escaped_fragment_=/?(.*)$
-    RewriteRule ^(.*)$ /snapshots/sp_%1.html [NC,L]
+    RewriteCond %{HTTP_USER_AGENT} (Googlebot|bingbot|Googlebot-Mobile|Baiduspider|Yahoo|YahooSeeker|DoCoMo|Twitterbot|TweetmemeBot|Twikle|Netseer|Daumoa|SeznamBot|Ezooms|MSNBot|Exabot|MJ12bot|sogou\sspider|YandexBot|bitlybot|ia_archiver|proximic|spbot|ChangeDetection|NaverBot|MetaJobBot|magpie-crawler|Genieo\sWeb\sfilter|Qualidator.com\sBot|Woko|Vagabondo|360Spider|ExB\sLanguage\sCrawler|AddThis.com|aiHitBot|Spinn3r|BingPreview|GrapeshotCrawler|CareerBot|ZumBot|ShopWiki|bixocrawler|uMBot|sistrix|linkdexbot|AhrefsBot|archive.org_bot|SeoCheckBot|TurnitinBot|VoilaBot|SearchmetricsBot|Butterfly|Yahoo!|Plukkie|yacybot|trendictionbot|UASlinkChecker|Blekkobot|Wotbox|YioopBot|meanpathbot|TinEye|LuminateBot|FyberSpider|Infohelfer|linkdex.com|Curious\sGeorge|Fetch-Guess|ichiro|MojeekBot|SBSearch|WebThumbnail|socialbm_bot|SemrushBot|Vedma|alexa\ssite\saudit|SEOkicks-Robot|Browsershots|BLEXBot|woriobot|AMZNKAssocBot|Speedy|oBot|HostTracker|OpenWebSpider|WBSearchBot|FacebookExternalHit) [NC]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !\.(.*)
+    RewriteRule ^[#!/]*([\w\/\-_]*)$ /snapshots/sp_%1.html [QSA,L]
+</ifModule>
+
+# ------------------------------------------------------------------------------
+# | angularjs pushstate (history) support                                      |
+# ------------------------------------------------------------------------------
+
+# See http://www.josscrowcroft.com/2012/code/htaccess-for-html5-history-pushstate-url-routing/
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+    Options +FollowSymLinks
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{QUERY_STRING} !^_escaped_fragment_=/?(.*)$
+    RewriteCond %{REQUEST_URI} !index
+    RewriteCond %{REQUEST_URI} !.*\.(css|js|html|png)
+    RewriteRule (.*) index.html [L]
 </ifModule>
