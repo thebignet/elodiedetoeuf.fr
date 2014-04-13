@@ -1,4 +1,4 @@
 # robotstxt.org
 
 User-agent: *
-Sitemap: http://elodiedetoeuf.fr/sitemap.xml
+Sitemap: http://www.elodiedetoeuf.fr/sitemap.xml
