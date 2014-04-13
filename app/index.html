@@ -30,6 +30,25 @@
       </script>
       <![endif]-->
 
+    <div id="fb-root"></div>
+    <script>
+      //Facebook
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '612018645552681',
+          status     : true,
+          xfbml      : true
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <header ng-controller="NavCtrl">
       <div id="navbar" class="navbar navbar-inverse relative" role="navigation" data-offset-top="300" bs-affix>
         <div class="container">
@@ -65,13 +84,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          &copy; 2014
+          <div style="margin-right:-31px">
+            <a style="width:87px" href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.elodiedetoeuf.fr" data-via="thebignet" data-lang="fr">Tweeter</a><br/>
+          </div>
+          <div class="fb-like" data-href="https://www.facebook.com/elodiedetoeuf" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
         </div>
         <div class="col-md-6 text-right">
-          <div style="margin-right:-31px">
-            <a style="width:87px" href="https://twitter.com/share" class="twitter-share-button" data-url="http://elodiedetoeuf.fr" data-via="thebignet" data-lang="fr">Tweeter</a><br/>
-          </div>
-          <div class="fb-like" data-href="http://elodiedetoeuf.fr" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+          &copy; 2014
         </div>
       </div>
     </div>
@@ -110,25 +129,8 @@
     <script src="scripts/controllers/galerie.js"></script>
     <script src="scripts/controllers/tarif.js"></script>
     <!-- endbuild -->
-    <div id="fb-root"></div>
+
     <script>
-      //Facebook
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '612018645552681',
-          status     : true,
-          xfbml      : true
-        });
-      };
-
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-
       //Twitter
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
     </script>
