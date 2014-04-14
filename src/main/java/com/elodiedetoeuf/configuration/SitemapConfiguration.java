@@ -28,7 +28,7 @@ public class SitemapConfiguration {
 
     @Bean
     public String sitemap() throws IOException {
-        File sitemapFile = new File("./tmp/");
+        File sitemapFile = new File("/tmp/");
         WebSitemapGenerator wsg = new WebSitemapGenerator(SITE_URL, sitemapFile);
         for (WebSitemapDto page : pages) {
             WebSitemapUrl url = new WebSitemapUrl.Options(SITE_URL + "/" + page.getUrl()).lastMod(new Date()).priority(
@@ -36,7 +36,7 @@ public class SitemapConfiguration {
             wsg.addUrl(url);
         }
         wsg.write();
-        Resource resource = new FileSystemResource("./tmp/sitemap.xml");
+        Resource resource = new FileSystemResource("/tmp/sitemap.xml");
         StringWriter writer = new StringWriter();
         IOUtils.copy(resource.getInputStream(), writer, "UTF-8");
         return writer.toString();
