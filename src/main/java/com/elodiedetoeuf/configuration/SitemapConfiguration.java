@@ -22,7 +22,7 @@ public class SitemapConfiguration {
 
     private static final String SITE_URL = "http://www.elodiedetoeuf.fr";
     private static final List<WebSitemapDto> pages = Arrays.asList(new WebSitemapDto("", 1.0), new WebSitemapDto(
-            "mariage", 0.8), new WebSitemapDto("presentation", 1.0), new WebSitemapDto("babyshower", 0.4),
+            "mariage", 0.8), new WebSitemapDto("babyshower", 0.4),
             new WebSitemapDto("tarifs", 0.8), new WebSitemapDto("illustratrice", 0.3),
             new WebSitemapDto("contact", 0.5), new WebSitemapDto("bapteme", 0.4));
 
