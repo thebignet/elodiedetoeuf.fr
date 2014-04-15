@@ -22,13 +22,20 @@ public class MainController {
     private static final String BOTS = "Googlebot|bingbot|Googlebot-Mobile|Baiduspider|Yahoo|YahooSeeker|DoCoMo|Twitterbot|TweetmemeBot|Twikle|Netseer|Daumoa|SeznamBot|Ezooms|MSNBot|Exabot|MJ12bot|sogou spider|YandexBot|bitlybot|ia_archiver|proximic|spbot|ChangeDetection|NaverBot|MetaJobBot|magpie-crawler|Genieo Web filter|Qualidator.com Bot|Woko|Vagabondo|360Spider|ExB Language Crawler|AddThis.com|aiHitBot|Spinn3r|BingPreview|GrapeshotCrawler|CareerBot|ZumBot|ShopWiki|bixocrawler|uMBot|sistrix|linkdexbot|AhrefsBot|archive.org_bot|SeoCheckBot|TurnitinBot|VoilaBot|SearchmetricsBot|Butterfly|Yahoo!|Plukkie|yacybot|trendictionbot|UASlinkChecker|Blekkobot|Wotbox|YioopBot|meanpathbot|TinEye|LuminateBot|FyberSpider|Infohelfer|linkdex.com|Curious George|Fetch-Guess|ichiro|MojeekBot|SBSearch|WebThumbnail|socialbm_bot|SemrushBot|Vedma|alexa site saudit|SEOkicks-Robot|Browsershots|BLEXBot|woriobot|AMZNKAssocBot|Speedy|oBot|HostTracker|OpenWebSpider|WBSearchBot|FacebookExternalHit";
     private static final Pattern BOT_PATTERN = Pattern.compile(BOTS);
     private static final Log log = LogFactory.getLog(MainController.class);
+    private static final String INDEX = "index";
+    private static final String HTML_EXT = ".html";
+    private static final String SNAPSHOTS_DIR = "snapshots/";
+    private static final String INDEX_PAGE = INDEX + HTML_EXT;
 
     private String homeUser() {
-        return "index.html";
+    	return INDEX_PAGE;
     }
 
     private String pageBot(String page) {
-        return "snapshots/sp_" + page + ".html";
+    	StringBuilder sb = new StringBuilder(SNAPSHOTS_DIR);
+    	sb.append("".equals(page)?INDEX:page);
+    	sb.append(HTML_EXT);
+    	return sb.toString();
     }
 
     private boolean isBot(String userAgent) {

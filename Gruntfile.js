@@ -370,7 +370,14 @@ module.exports = function (grunt) {
         options: {
           snapshotPath: 'static/snapshots/',
           sitePath: 'http://127.0.0.1:9000/',
-          fileNamePrefix: 'sp_',
+          fileNamePrefix: '',
+          sanitize: function (requestUri) {
+        	  if(requestUri === ''){
+        		  return 'index'
+        	  } else {
+        		  return requestUri;
+        	  }
+          },
           removeScripts: true,
           removeLinkTags: true,
           msWaitForPages: 1000,
