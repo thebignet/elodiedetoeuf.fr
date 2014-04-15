@@ -1,13 +1,13 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" ng-app="aVotreImage"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" ng-app="aVotreImage"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" ng-app="aVotreImage"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="aVotreImage"> <!--<![endif]-->
+<head ng-controller="HeadCtrl">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="6lY6y194e_6Igah8RLMfjOHB1wRKotHfj75AnfyAy-A"/>
-    <title>Elodie Detoeuf - faire-parts</title>
+    <title ng-bind="'Elodie Detoeuf - ' + $root.title">MyApp - Welcome</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <meta name="fragment" content="!" />
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 </head>
-<body ng-app="aVotreImage" data-spy="scroll" style="opacity: 1;" cz-shortcut-listen="true">
+<body data-spy="scroll" style="opacity: 1;" cz-shortcut-listen="true">
     <!--[if lt IE 9]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <script type="text/javascript">
@@ -126,6 +126,7 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/head.js"></script>
     <script src="scripts/controllers/nav.js"></script>
     <script src="scripts/controllers/galerie.js"></script>
     <script src="scripts/controllers/tarif.js"></script>
