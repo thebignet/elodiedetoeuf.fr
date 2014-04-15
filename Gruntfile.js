@@ -380,7 +380,11 @@ module.exports = function (grunt) {
           },
           removeScripts: true,
           removeLinkTags: true,
+          bodyAttr: 'data-prerendered',
           msWaitForPages: 1000,
+          replaceStrings:[
+                          {'<nav.*</nav>': ''}
+                      ],
           urls: [
             '',
             'illustratrice',
