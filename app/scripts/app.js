@@ -1,14 +1,15 @@
 'use strict';
 
-angular.module('aVotreImage', [
+var app = angular.module('aVotreImage', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
   'ngRoute',
   'angular-flexslider',
-  'piwik'
-])
-  .config(['$locationProvider','$routeProvider',function ($locationProvider,$routeProvider) {
+  'piwik',
+  'pascalprecht.translate'
+]);
+app.config(['$locationProvider','$routeProvider',function ($locationProvider,$routeProvider) {
     $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix('!');
     $routeProvider
@@ -51,3 +52,10 @@ angular.module('aVotreImage', [
         redirectTo: '/'
       });
   }]);
+app.config(function($translateProvider) {
+    // Our translations will go in here
+	$translateProvider.translations('en', {
+	    HEADLINE: 'Hello there, This is my awesome app!',
+	    INTRO_TEXT: 'And it has i18n support!'
+	  });
+});

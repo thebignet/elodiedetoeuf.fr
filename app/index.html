@@ -77,6 +77,8 @@
       </div>
     </header>
     <ngp-piwik ngp-set-js-url="http://piwik.elodiedetoeuf.fr/piwik.js" ngp-set-tracker-url="http://piwik.elodiedetoeuf.fr/piwik.php" ngp-set-site-id="1"> </ngp-piwik>
+	<h2>{{ 'HEADLINE' | translate }}</h2>
+    
 
     <!-- Add your site or application content here -->
     <div ng-view=""></div>
@@ -119,6 +121,7 @@
     <script src="bower_components/angular-flexslider/angular-flexslider.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/angular-piwik/angular-piwik.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <script src="bower_components/flexslider/jquery.flexslider.js"></script>

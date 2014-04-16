@@ -3,7 +3,7 @@
 'use strict';
 
 angular.module('aVotreImage')
-.controller('NavCtrl', function ($scope,$location,$rootScope,Piwik) {
+.controller('NavCtrl', function ($scope,$location,$rootScope,Piwik,$translate) {
 	$scope.menus = [
 		{'href':'/', 'text':'Presentation'},
 		{'href':'/galerie','text':'Galerie', 'menus':[
@@ -26,6 +26,7 @@ angular.module('aVotreImage')
 			Piwik.setDocumentTitle($location.path());
 			Piwik.trackPageView();
 		}
+		$translate.use('en');
 	});
 	function setActive(route){
 		_.each($scope.menus,function(item){
